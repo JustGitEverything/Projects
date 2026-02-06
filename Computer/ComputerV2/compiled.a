@@ -1,0 +1,19 @@
+NOP
+a@LB = *
+a@HB = *
+
+LDV_A 0
+STA_A_FB a@LB a@HB
+
+b@LB = *
+b@HB = *
+
+LDV_A 100
+STA_A_FB b@LB b@HB
+
+LDA_A b@HB b@LB
+ADV_A 100
+SUA_A a@HB a@LB
+
+ADV_A 1
+STA_A_FB b@LB b@HB
